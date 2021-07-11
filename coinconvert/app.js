@@ -8,5 +8,7 @@ const coinConvert = (dollars) => {
     // Asigna el monto equivalente en pesos chilenos
     const pesosChilenos=dollars*660 /* ??? */;
   
-    return [soles, pesosMexicanos, pesosChilenos];
+    return ["El valor en soles es ", soles, "El valor en pesos mexicanos es ", pesosMexicanos, pesosChilenos];
   }
+  document.write(coinConvert(165))
+

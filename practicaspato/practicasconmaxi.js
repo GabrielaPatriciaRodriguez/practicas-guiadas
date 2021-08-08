@@ -23,7 +23,8 @@
 // precio: 850
 // }
 
-// // Creamos un array carrito y un array productos (y dentro de productos tenemos los distintos objetos)
+// // Creamos un array carrito y un array productos (y dentro de productos tenemos los 
+//distintos objetos)
 // let carrito = []
 // let productos = [morena, pizzamuza, pizzahumita, pizzanapo]
 

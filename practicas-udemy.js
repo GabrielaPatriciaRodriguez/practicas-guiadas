@@ -17,7 +17,7 @@
 // console.log(listadoDos[2]);
 // console.log(listadoDos.length);//para conocer su longitud
 
-// //Para insertar un elemento al final de mi arreglo: Añade uno o mas elementos al final 
+// //Para insertar un elemento al final de mi arreglo: Añade uno o mas elementos al final
 // listadoDos.push(128, 157, 534);
 // console.log(listadoDos);
 
@@ -73,7 +73,6 @@
 // console.log(usuarioUno.perfil.cuenta); // para acceder a distintas propiedades
 // console.log(usuarioUno.perfil.id);
 
-
 // //CREAR EL OBJETO CELULAR
 // const celular = {};
 
@@ -85,23 +84,136 @@
 
 // console.log(celular);
 // console.log(celular.nombre);
-// console.log(celular.serie); 
+// console.log(celular.serie);
 
 //CLASES
 
+// class alumnos {
+//   //Atributos
+//   constructor(nombre, edad, tutor, telefono, grado, año) {
+//     (this.nombre = nombre),
+//       (this.edad = edad),
+//       (this.tutor = tutor),
+//       (this.telefono = telefono),
+//       (this.grado = grado),
+//       (this.año = año);
+//   }
+//   //Metodos - Funciones
+//   saludar() {
+//     return "Hola soy " + this.nombre;
+//   }
+//   presentacion() {
+//     return (
+//       "Hola soy " +
+//       this.nombre +
+//       " y tengo " +
+//       this.edad +
+//       " años, voy a " +
+//       this.grado +
+//       " grado."
+//     );
+//   }
+//   llamarAlTutor() {
+//     return (
+//       "Si ha sucedido una emergencia llamar a " +
+//       this.tutor +
+//       " al numero de telefono " +
+//       this.telefono
+//     );
+//   }
+// }
 
+// const alumnoUno = new alumnos(
+//   "Patricia",
+//   14,
+//   "Betty",
+//   375648596,
+//   "Cuarto",
+//   2021
+// );
 
-class alumnos {
-    //Atributos
-    constructor(nombre, edad, tutor, curso, año) {
-        this.nombre = nombre,
-        this.edad = edad,
-        this.tutor = tutor,
-        this.curso = curso,
-        this.año = año
+// const alumnoDos = new alumnos("Lorena", 15, "Betty", 1258669, "Sexto", 2021);
+
+// console.log(alumnoUno.saludar());
+// alumnoDos.saludar();
+
+// console.log(alumnoDos.presentacion());
+
+class personas {
+  constructor(nombre, dni, genero, celular, ciudad, direccion, ocupacion) {
+    (this.nombre = nombre),
+    (this.genero = genero),
+    (this.dni = dni),
+    (this.celular = celular),
+    (this.ciudad = ciudad),
+    (this.direccion = direccion),
+    (this.ocupacion = ocupacion)
+  }
+
+//metodos - funciones
+enviarInvitaciones(){
+if (this.genero === "M"){ 
+  return "Sr " + 
+    this.ocupacion +
+    this.nombre +
+    " ud. esta invitado a participar del acto del 25 de mayo";
+} else if (this.genero === "F")
+  return "Sra " + 
+  this.ocupacion + " " +
+  this.nombre + 
+  " ud. esta invitada a ...";
+}
+
+llamarProfesor() {
+  if(this.ocupacion === "profesor" || this.ocupacion === "profesora")
+return this.nombre +
+  " Por favor presentarse en Secretaria Academica ";
+} 
+obtenerRecibo() {
+    return "Dejo constancia del pago a " +
+      this.nombre +
+      " de la suma de $000 ";
 }
 };
-    
-const alumnoUno = new alumnos("Patricia", 14, "Betty", "Cuarto", 2021);
 
-console.log(alumnoUno);
+let personaTres = new personas("Betty", 1548966, "F", 1548996, "Posadas", "Lavalle y Ferre", 
+"profesora");
+
+
+
+class escuela {
+  constructor(numero, nombre, telefono, ciudad, matricula, Director) {
+    (this.numero = numero),
+    (this.nombre = nombre),
+    (this.telefono = telefono),
+    (this.ciudad = ciudad),
+    (this.matricula = matricula),
+    (this.Director = Director);
+  }
+  //funciones
+  incluirProfesores() {
+    return profesores;
+}
+    generarRecibo() {
+        //obtenerRecibo
+        return (
+          "Dejo constancia del pago a " +
+          this.nombre +
+          " de la suma de $000 " +
+          "por dictar la materia " +
+          this.materia
+        );
+      }
+  llamarDirector() {
+    return (
+      "Llamar al Establecimiento Escolar " +
+      this.nombre +
+      " de la Ciudad " +
+      this.ciudad +
+      " cuyo Director es " +
+      this.Director +
+      this.telefono
+    );        
+  }
+}
+

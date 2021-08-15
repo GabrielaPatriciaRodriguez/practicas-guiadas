@@ -1,11 +1,11 @@
-class Animales {
+class Animal {
     constructor(fisonomia, alimentacion, habitad, reproduccion){
         this.fisonomia = fisonomia,
         this.alimentacion = alimentacion,
         this.habitad = habitad,
         this.reproduccion = reproduccion
     }
-    //vertebrados e invertabrados
+    //vertebrados e invertebrados
     segunFisonomia (){
         if(this.fisonomia === "vertebrado"){ 
         return "Es un ser vivo que pertenece al reino animal, es " + this.fisonomia + 
@@ -45,9 +45,29 @@ class Animales {
         }
     }
 }
-let humano = new Animales("vertebrado", "omnivoro", "terrestre", "viviparo");
-let vivora = new Animales("invertebrado", "carnivoro", "terrestre", "oviparo");
-let caballo = new Animales("vertebrados", "herbivoro", "terrestre", "viviparo");
+let humano = new Animal("vertebrado", "omnivoro", "terrestre", "viviparo");
+let vivora = new Animal("invertebrado", "carnivoro", "terrestre", "oviparo");
+let caballo = new Animal("vertebrados", "herbivoro", "terrestre", "viviparo");
+
+class Vertebrado extends Animal {
+    constructor(fisonomia, alimentacion, habitad, reproduccion, caracteristicas){
+        super(fisonomia, alimentacion, habitad, reproduccion),
+        this.caracteristicas = caracteristicas
+    }
+    caractFundamentales (){
+        return this.caracteristicas;
+    }
+}
+
+let perro = new Vertebrado("vertebrado", "carnivoro", "terrestre", "viviparo");
+perro.caracteristicas = "cuadrupedo";
+console.log(perro);
 
 
 
+// module.exports = {
+//     Alimento
+//   }
+//   para exportar
+//   const { Alimento } = require("./alimento.js")
+//   para importar

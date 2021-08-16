@@ -25,6 +25,7 @@ class Animal {
         " es decir nacen de huevos.";
         }
     }
+    //carnivoros - herbivoros - omnivoros
     segunAlimentacion (){
         if(this.alimentacion === "carnivoro"){
             return "Es un animal " + this.alimentacion + " es decir se alimenta de carne."; 
@@ -37,6 +38,7 @@ class Animal {
         }
         
     }
+    //terrestre - acuatico
     segunHabitad (){
         if(this.habitad === "terrestre"){
             return "Es un animal " + this.habitad + " es decir habita en la superficie terrestre.";
@@ -52,22 +54,25 @@ let caballo = new Animal("vertebrados", "herbivoro", "terrestre", "viviparo");
 class Vertebrado extends Animal {
     constructor(fisonomia, alimentacion, habitad, reproduccion, caracteristicas){
         super(fisonomia, alimentacion, habitad, reproduccion),
-        this.caracteristicas = caracteristicas
+        this.caracteristicas = Array.isArray(caracteristicas) ? [...caracteristicas]: []
+        //this.caracteristicas = [] //otra opcion 
     }
     caractFundamentales (){
         return this.caracteristicas;
     }
+    //otra opcion
+    /*setCaracteristica(caracteristicas){
+    this.caracteristicas = [...this.caracteristicas,...caracteristicas]
+  } */
 }
 
-let perro = new Vertebrado("vertebrado", "carnivoro", "terrestre", "viviparo");
-perro.caracteristicas = "cuadrupedo";
+let perro = new Vertebrado("vertebrado", "carnivoro", "terrestre", "viviparo", ["cuadrupedo"]);
+
 console.log(perro);
 
 
+//para exportar
+module.exports = {
+ Vertebrado
+}
 
-// module.exports = {
-//     Alimento
-//   }
-//   para exportar
-//   const { Alimento } = require("./alimento.js")
-//   para importar

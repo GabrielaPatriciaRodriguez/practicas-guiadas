@@ -14,6 +14,17 @@ ul li a {
 }
 
 p:first-of-type {
-    color: black;
+    color: white;
 }
 
+.rojo {
+    color: red;
+}
+
+.verde {
+    color: green;
+}
+
+body {
+    background-color: rgb(2, 2, 27);
+}

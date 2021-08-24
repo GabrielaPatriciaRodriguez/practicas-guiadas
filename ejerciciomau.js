@@ -33,8 +33,7 @@ retornar todos los numeros que están entre esos parametros.
 Por ejemplo min: 2 , max: 10, deben retornar: 3 4 5 6 7 8 9*/
 
 function numIntermedios(min, max) {
-  let i = min;
-  for (i = min + 1; i < max; i++) {
+  for (let i = min + 1; i < max; i++) {
     console.log(i);
   }
 }
@@ -44,8 +43,7 @@ entre dos numeros enteros.
 ejemplo, entre 1 y 10: se debe retornar: 3,5,7,9*/
 
 function impares(min, max) {
-  let i = min;
-  for (i = min; i <= max; i++) {
+  for (let i = min; i <= max; i++) {
     if (i % 2 === 1) 
     console.log(i);
   }
@@ -55,7 +53,7 @@ function impares(min, max) {
 
 let numeros = [2, 4];
 let suma = numeros.reduce((a, b)=> a + b, 0);
-console.log(suma);i
+console.log(suma);
 let promedio = suma/numeros.length;
 console.log(promedio);
 
@@ -72,10 +70,37 @@ for (i = 0; i < numeros.length; i ++){
 /*7. realizar un programa que nos devuelva la tabla de multiplicar de un numero 
 (multiplicar el numero hasta 10)*/
 
-function tablaMultiplicar (num) {
-    for(i = 1; i < 11; i++){
+function tablaMultiplicar (num, num2) {
+    for(i = 0; i <= num2; i++){
         console.log(num + " x " + i + " = " + (num * i))
     }
 }
 
+
+/* realizar una funcion que recibe un numero entero y devuelve en un 
+array todos los numeros divisores de ese numero. */
+
+function divisor(num) {
+  let array = [];
+  for (let i = 1; i <= num; i++) {
+  if (num % i == 0) { 
+    array.push(i)
+  }
+  } 
+  return array;
+  }
+
+
+  
+/*8. realizar una función que guarde los datos en un array (cualquier tipo de dato es valido)*/
+
+function guardarDatos() {
+  let acumulador = [];
+  let datosUsuario = prompt("Introduzca los datos");
+  while (datosUsuario != null) {
+      acumulador.push(datosUsuario);
+      datosUsuario = prompt("Introduzca los datos");
+  }
+  return acumulador;
+}
 

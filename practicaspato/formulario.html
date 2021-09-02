@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practicando Formulario</title>
+  </head>
+  <body>
+    <h1>Formulario</h1>
+    <form action="" method="POST">
+      <fieldset>
+        <legend>INFO PERSONAL</legend>
+        <div>
+          <div>Sexo:</div>
+          <label for="man">Hombre</label>
+          <input type="radio" name="sexo" id="Hombre" />
+          <label for="woman">Mujer</label>
+          <input type="radio" name="sexo" id="Mujer" />
+        </div>
+        <div>
+          <label for="firstName">Nombre:</label>
+          <div>
+            <input type="text" name="firstName" id="firstName" placeholder="Escriba su Nombre" required>
+          </div>
+        </div>
+        <div>
+          <label for="lastName">Apellido:</label>
+          <div>
+            <input type="text" name="lastName" id="lastName" placeholder="Escriba su Apellido" required>
+          </div>
+        </div>
+        <div>
+          <label for="talle">Talle</label>
+          <select name="talles">
+            <option value="S">Small</option>
+            <option value="M">Medium</option>
+            <option value="L">Large</option>
+          </select>
+        </div>
+        <div>
+          <input type="submit" value="Enviar" />
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>

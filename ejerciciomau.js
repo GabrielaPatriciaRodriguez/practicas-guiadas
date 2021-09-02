@@ -90,8 +90,6 @@ function divisor(num) {
   return array;
   }
 
-
-  
 /*8. realizar una función que guarde los datos en un array (cualquier tipo de dato es valido)*/
 
 function guardarDatos() {
